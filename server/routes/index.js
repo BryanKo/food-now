@@ -10,8 +10,6 @@ module.exports = router;
 
 
 // Example from yelp's github
-'use strict';
-
 const yelp = require('yelp-fusion');
 
 // Place holder for Yelp Fusion's API Key. Grab them
@@ -25,10 +23,16 @@ const searchRequest = {
 
 const client = yelp.client(apiKey);
 
-client.search(searchRequest).then(response => {
-  const firstResult = response.jsonBody.businesses[0];
-  const prettyJson = JSON.stringify(firstResult, null, 4);
-  console.log(prettyJson);
-}).catch(e => {
-  console.log(e);
-});
+const yelpRequest = function() {
+	client.search(searchRequest).then(response => {
+	  const firstResult = response.jsonBody.businesses[0];
+	  const prettyJson = JSON.stringify(firstResult, null, 4);
+	  console.log(prettyJson);
+
+	  // logic
+	}).catch(e => {
+	  console.log(e);
+	});
+};
+
+yelpRequest();
