@@ -26,10 +26,19 @@ class Category extends Component {
                 </div>
             </Carousel>
           </div>
-          <input type="text" placeholder="Search..."/>
+          
+          <form>
+            <input type="text" id="uiCat" placeholder="Search..."/>
+            <input type="submit" onClick={this.myfunction.bind(this)} value="Submit"/>
+          </form>
         </div>
       </div>
     );
+  }
+
+  myfunction () {
+    console.log(document.getElementById("uiCat").value);
+    // console.log("hello");
   }
 }
 
