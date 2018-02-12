@@ -16,7 +16,10 @@ class Main extends Component{
         return(
             <HashRouter>
                 <div>
-                    <h1>Simple SPA</h1>
+                    <div className="header-title">
+                        <div className="title">FOOD.NOW</div>
+                        <div className="account">account</div>
+                    </div>
                         <div className="header">
                             <div className="menu"><NavLink exact to="/">Home</NavLink></div>
                             <div className="menu"><NavLink to="/category">Category</NavLink></div>

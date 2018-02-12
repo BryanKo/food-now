@@ -33,3 +33,21 @@ h2{
   margin-right: auto;
   width: 50%;
 }
+.account{
+  float:right;
+  padding: 15px;
+}
+.title{
+  font-size: 40px;
+  font-weight: bold;
+  float: left;
+}
+.header-title{
+  display: block;
+  overflow: hidden;
+  width: 100%;
+}
+.searchBar{
+  width: 100%;
+  margin-top: 10px;
+}

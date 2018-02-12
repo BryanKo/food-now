@@ -25,8 +25,9 @@ class Category extends Component {
                     <p className="legend">Mexican</p>
                 </div>
             </Carousel>
+            <input type="text" className="searchBar" placeholder="Search..."/>
+
           </div>
-          <input type="text" placeholder="Search..."/>
         </div>
       </div>
     );
