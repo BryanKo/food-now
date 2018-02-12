@@ -4,7 +4,7 @@ class MealType extends Component {
   render() {
     return (
       <div>
-        <h2>MEAL TYPE</h2>
+        <h2>2. How hungry are you?</h2>
         
       </div>
     );

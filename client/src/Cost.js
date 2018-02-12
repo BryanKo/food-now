@@ -4,7 +4,7 @@ class Cost extends Component {
   render() {
     return (
       <div>
-        <h2>COST</h2>
+        <h2>4. How much are you willing to spend?</h2>
         
       </div>
     );
