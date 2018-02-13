@@ -1,9 +1,11 @@
 import React, { Component } from "react";
 import { Carousel } from 'react-responsive-carousel';
+import { NavLink } from 'react-router-dom';
 //require ('react-responsive-carousel/lib/styles/carousel.css');
 import burger from './images/burger.jpg';
 import nachos from './images/nachos.jpg';
 import chinese from './images/chinese.jpg';
+
 class Category extends Component {
   render() {
     return (
@@ -26,7 +28,9 @@ class Category extends Component {
                 </div>
             </Carousel>
             <input type="text" className="searchBar" placeholder="Search..."/>
-
+            <NavLink to="/mealtype">
+              <button id="next" type="button">Next</button>
+            </NavLink>
           </div>
         </div>
       </div>
