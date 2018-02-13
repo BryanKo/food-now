@@ -55,3 +55,15 @@ h2{
 .body-text{
   text-align: center;
 }
+.distance-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  user-select: none;
+}
+.selected{
+  color: red;
+}
+.notselected{
+  color: black;
+}
