@@ -5,7 +5,10 @@ import { NavLink } from 'react-router-dom';
 import burger from './images/burger.jpg';
 import nachos from './images/nachos.jpg';
 import chinese from './images/chinese.jpg';
+<<<<<<< HEAD
+=======
 import axios from 'axios';
+>>>>>>> bkko
 
 class Category extends Component {
   render() {
@@ -28,13 +31,19 @@ class Category extends Component {
                     <p className="legend">Mexican</p>
                 </div>
             </Carousel>
+            <input type="text" className="searchBar" placeholder="Search..."/>
+            <NavLink to="/mealtype">
+              <button id="next" type="button">Next</button>
+            </NavLink>
           </div>
+<<<<<<< HEAD
+=======
+          
           <form>
             <input type="text" id="uiCat" placeholder="Search..."/>
-	    <NavLink to="/nealtype">
-              <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
-	    </NavLink>
+            <input type="submit" onClick={this.myfunction.bind(this)} value="Submit"/>
           </form>
+>>>>>>> bkko
         </div>
       </div>
     );

@@ -8,6 +8,7 @@ var yelpFusion = require('yelp-fusion'); // adding yelp fusion
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var yelpInput = require('./routes/yelpInput');
 
 var app = express();
 
@@ -25,12 +26,20 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/users', users);
+app.use('/yelpInput', yelpInput);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
+});
+
+
+app.use(function(req, res, next) {
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+	next();
 });
 
 // error handler
