@@ -4,6 +4,8 @@ import { Carousel } from 'react-responsive-carousel';
 import burger from './images/burger.jpg';
 import nachos from './images/nachos.jpg';
 import chinese from './images/chinese.jpg';
+import axios from 'axios';
+
 class Category extends Component {
   render() {
     return (
@@ -36,9 +38,26 @@ class Category extends Component {
     );
   }
 
-  myfunction () {
-    console.log(document.getElementById("uiCat").value);
+  myfunction () { 
+    var language =document.getElementById("uiCat").value;
+    console.log(language);
     // console.log("hello");
+    axios.get('http://localhost:8080/yelpInput', {
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'applications/json',
+
+      },
+      params: {
+        term: language
+      }
+    })
+      .then(function(response) {
+        console.log(response.data);
+      }).catch(function(response) {
+        console.log('error:');
+        console.log(response);
+      });
   }
 }
 
