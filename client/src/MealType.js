@@ -5,9 +5,9 @@ class MealType extends Component {
     return (
       <div>
         <h2>2. How hungry are you?</h2>
-        <NavLink to="/distance">
+        {/* <NavLink to="/distance">
           <button id="next" type="button">Next</button>
-        </NavLink>
+        </NavLink> */}
       </div>
     );
   }

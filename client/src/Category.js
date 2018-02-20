@@ -31,9 +31,9 @@ class Category extends Component {
           </div>
           <form>
             <input type="text" id="uiCat" placeholder="Search..."/>
-	    <NavLink to="/nealtype">
+	    {/* <NavLink to="/Mealtype">
               <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
-	    </NavLink>
+	    </NavLink> */}
           </form>
         </div>
       </div>

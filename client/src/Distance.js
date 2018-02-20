@@ -23,9 +23,9 @@ class Distance extends Component {
           <DistanceOption content="Within 4 blocks"></DistanceOption>
           <DistanceOption content="Delivery (fat ass)"></DistanceOption>
         </div>
-        <NavLink to="/cost">
+        {/* <NavLink to="/cost">
           <button id="next" type="button">Next</button>
-        </NavLink>
+        </NavLink> */}
       </div>
     );
   }

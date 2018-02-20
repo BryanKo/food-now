@@ -15,12 +15,12 @@ class Main extends Component{
     render(){
         return(
             <HashRouter>
-                <div>
+                <div className="content">
                     <div className="header-title">
                         <div className="title">FOOD.NOW</div>
                         <div className="account">account</div>
                     </div>
-                        <div className="header">
+                        {/* <div className="header">
                             <div className="menu"><NavLink exact to="/">Home</NavLink></div>
                             <div className="menu"><NavLink to="/category">Category</NavLink></div>
                             <div className="menu"><NavLink to="/mealtype">Meal Type</NavLink></div>
@@ -35,7 +35,13 @@ class Main extends Component{
                             <Route path="/distance" component={Distance}/>
                             <Route path="/cost" component={Cost}/>
                             <Route path="/rating" component={Rating}/>
-                        </div>
+                        </div> */}
+                        <Category></Category>
+                        <MealType></MealType>
+                        <Distance></Distance>
+                        <Cost></Cost>
+                        <Rating></Rating>
+                        <button>FOOD NOW!</button>
                 </div>
             </HashRouter>
         );

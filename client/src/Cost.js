@@ -5,9 +5,9 @@ class Cost extends Component {
     return (
       <div>
         <h2>4. How much are you willing to spend?</h2>
-        <NavLink to="/rating">
+        {/* <NavLink to="/rating">
           <button id="next" type="button">Next</button>
-        </NavLink>
+        </NavLink> */}
       </div>
     );
   }

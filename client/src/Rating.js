@@ -5,9 +5,9 @@ class Rating extends Component {
     return (
       <div>
         <h2>5. How great of a place do you want?</h2>
-        <NavLink to="/rating">
+        {/* <NavLink to="/rating">
           <button id="next" type="button">Next</button>
-        </NavLink>
+        </NavLink> */}
       </div>
     );
   }
