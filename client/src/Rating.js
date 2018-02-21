@@ -5,7 +5,8 @@ class Rating extends Component {
     return (
       <div>
         <h2>4. How great of a place do you want?</h2>
-          <div>
+          <div className="distance-content">
+            <div>
               <input type="radio" name="ratingValue" value="*"/> *
             </div>
             <div>
@@ -19,7 +20,8 @@ class Rating extends Component {
             </div>
             <div>
               <input type="radio" name="ratingValue" value="*****"/> *****
-            </div>  
+            </div>
+          </div>
       </div>
     );
   }
