@@ -8,15 +8,21 @@ import chinese from './images/chinese.jpg';
 import axios from 'axios';
 
 class Category extends Component {
+  constructor(props) {
+    super(props);    
+    // This binding is necessary to make `this` work in the callback
+    this.select = this.select.bind(this);
+  }
+
   render() {
     return (
       <div>
         <h2>1. Choose a category! -- add as many as you want!</h2>
         <div className="foodChoice">
           <div className="foodCarousel">
-            <Carousel showArrows={true} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showIndicators={false} dynamicHeight={true}>
+            <Carousel showArrows={true} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showIndicators={false} dynamicHeight={true} onClickItem={select(this)}>
                 <div>
-                    <img src={burger} alt="burger"/>
+                    <img src={burger} alt="American"/>
                     <p className="legend">American</p>
                 </div>
                 <div>
@@ -40,6 +46,8 @@ class Category extends Component {
       </div>
     );
   }
+  
+  
 
   yelp () {
     var term = document.getElementById("uiCat").value;
@@ -64,5 +72,6 @@ class Category extends Component {
       });
   }
 }
+
 
 export default Category;
