@@ -13,6 +13,9 @@ class Category extends Component {
     // This binding is necessary to make `this` work in the callback
     this.select = this.select.bind(this);
   }
+  select(){
+    console.log("test");
+  }
 
   render() {
     return (
