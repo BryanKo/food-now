@@ -5,9 +5,7 @@ const yelp = require('yelp-fusion');
 
 // Place holder for Yelp Fusion's API Key. Grab them
 // from https://www.yelp.com/developers/v3/manage_app
-const apiKey = 'EyYI_U4MtffkcWkL9k6I9uSD1OTBsZwszl71QukNm5zTTvE43_UF8GG556tis1SsB6LCJDR_Ua1Vzzvn21PnpYxlzV_M1kAOcC_JmjHj-F0NsJRDV0c2fLPop8b2WXYx'; // change this key
-
-
+const apiKey = 'sVX4lUzEERso8L9-61gN8ZojgRWKlATmMcuAeruVlXsVd4cB8OKhlrpXWZUNN8fDeF6lY-wFxhFcHwIa9HsuhogXy1GBkarqgsY8wEkPPn4O0k1JXgsEIQ8YjXlyWnYx'; // change this key
 
 const client = yelp.client(apiKey);
 
@@ -16,11 +14,11 @@ router.get('/', function(req, res, next) {
   console.log(req.query);
 
   const searchRequest = {
-  term: req.query.term,
-  location: 'san francisco, ca'
-};
+    term: req.query.term,
+    location: 'san francisco, ca'
+  };
 	client.search(searchRequest).then(response => {
-	  const firstResult = response.jsonBody.businesses[0];
+	  const firstResult = response.jsonBody.businesses[Math.floor(Math.random() * Object.keys(response.jsonBody.businesses).length)];
 	  const prettyJson = JSON.stringify(firstResult, null, 4);
 	  console.log(prettyJson);
 
