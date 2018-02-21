@@ -14,9 +14,13 @@ class DistanceOption extends Component {
   }
   render() {
     return (
-        <div onClick={this.handleClick} className={this.state.selected ? "selected" : "notselected"}>{this.props.content}</div>
+        <div onClick={test} className={this.state.selected ? "selected" : "notselected"}>{this.props.content}</div>
     );
   }
+}
+
+function test(){
+  console.log("test2");
 }
 
 export default DistanceOption;

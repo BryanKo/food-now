@@ -14,7 +14,7 @@ class Category extends Component {
         <h2>1. Choose a category! -- add as many as you want!</h2>
         <div className="foodChoice">
           <div className="foodCarousel">
-            <Carousel showArrows={true} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showIndicators={false} dynamicHeight={true}>
+            <Carousel showArrows={true} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showIndicators={false} dynamicHeight={true} onClickItem={click}>
                 <div>
                     <img src={burger} alt="burger"/>
                     <p className="legend">American</p>
@@ -61,6 +61,10 @@ class Category extends Component {
         console.log(response);
       });
   }
+}
+
+function click(){
+  console.log("test");
 }
 
 export default Category;
