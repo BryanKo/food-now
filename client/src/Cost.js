@@ -4,7 +4,7 @@ class Cost extends Component {
   render() {
     return (
       <div>
-        <h2>4. How much are you willing to spend?</h2>
+        <h2>3. How much are you willing to spend?</h2>
         {/* <NavLink to="/rating">
           <button id="next" type="button">Next</button>
         </NavLink> */}
