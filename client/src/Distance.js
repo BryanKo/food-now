@@ -2,16 +2,6 @@ import React, { Component } from "react";
 import DistanceOption from "./DistanceOption";
 import { NavLink } from 'react-router-dom';
 class Distance extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {selected: false};
-
-    // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick() {
-    this.setState({selected: !this.state.selected});
-  }
   render() {
     return (
       <div>
