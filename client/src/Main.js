@@ -38,7 +38,6 @@ class Main extends Component{
                             <Route path="/rating" component={Rating}/>
                         </div> */}
                         <Category></Category>
-                        <MealType></MealType>
                         <Distance></Distance>
                         <Cost></Cost>
                         <Rating></Rating>

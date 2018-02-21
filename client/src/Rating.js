@@ -4,7 +4,7 @@ class Rating extends Component {
   render() {
     return (
       <div>
-        <h2>5. How great of a place do you want?</h2>
+        <h2>4. How great of a place do you want?</h2>
         {/* <NavLink to="/rating">
           <button id="next" type="button">Next</button>
         </NavLink> */}
