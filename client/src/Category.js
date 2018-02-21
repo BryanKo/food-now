@@ -29,8 +29,9 @@ class Category extends Component {
                 </div>
             </Carousel>
           </div>
-          <form>
+          <form onSubmit={this.yelp.bind(this)}>
             <input type="text" id="uiCat" placeholder="Search..."/>
+            <input type="submit" value="submit"/>
 	    {/* <NavLink to="/Mealtype">
               <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
 	    </NavLink> */}
@@ -40,22 +41,23 @@ class Category extends Component {
     );
   }
 
-  myfunction () { 
-    var language =document.getElementById("uiCat").value;
-    console.log(language);
+  yelp () {
+    var term = document.getElementById("uiCat").value;
+    console.log(term);
     // console.log("hello");
     axios.get('http://localhost:8080/yelpInput', {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Content-Type': 'applications/json',
-
       },
       params: {
-        term: language
+        term: term
       }
     })
       .then(function(response) {
         console.log(response.data);
+        localStorage.setItem('item', JSON.stringify(response.data));
+        console.log("=== " + localStorage.getItem('item'));
       }).catch(function(response) {
         console.log('error:');
         console.log(response);

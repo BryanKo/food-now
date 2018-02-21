@@ -10,6 +10,7 @@ import MealType from "./MealType";
 import Distance from "./Distance";
 import Cost from "./Cost";
 import Rating from "./Rating";
+import Button from "./Button";
 
 class Main extends Component{
     render(){
@@ -41,7 +42,7 @@ class Main extends Component{
                         <Distance></Distance>
                         <Cost></Cost>
                         <Rating></Rating>
-                        <button>FOOD NOW!</button>
+                        <Button></Button>
                 </div>
             </HashRouter>
         );
