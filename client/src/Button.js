@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import { Carousel } from 'react-responsive-carousel';
-import { NavLink } from 'react-router-dom';
-import axios from 'axios';
 
 class Button extends Component{
     render(){
