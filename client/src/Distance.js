@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import DistanceOption from "./DistanceOption";
-import { NavLink } from 'react-router-dom';
 class Distance extends Component {
   render() {
     return (

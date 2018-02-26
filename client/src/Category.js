@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Carousel } from 'react-responsive-carousel';
-import { NavLink } from 'react-router-dom';
 //require ('react-responsive-carousel/lib/styles/carousel.css');
 import burger from './images/burger.jpg';
 import nachos from './images/nachos.jpg';
 import chinese from './images/chinese.jpg';
 import axios from 'axios';
+import DistanceOption from "./DistanceOption";
 
 class Category extends Component {
   render() {
@@ -36,6 +36,12 @@ class Category extends Component {
               <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
 	    </NavLink> */}
           </form>
+          
+        </div>
+        <div className="distance-content">
+          <DistanceOption content="Breakfast"></DistanceOption>
+          <DistanceOption content="Lunch"></DistanceOption>
+          <DistanceOption content="Dinner"></DistanceOption>
         </div>
       </div>
     );

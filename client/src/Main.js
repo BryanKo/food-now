@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import{
-    Route,
-    NavLink,
-    HashRouter
-} from "react-router-dom";
-import Home from "./Home";
 import Category from "./Category";
-import MealType from "./MealType";
 import Distance from "./Distance";
 import Cost from "./Cost";
 import Rating from "./Rating";
