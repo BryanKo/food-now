@@ -18,7 +18,6 @@ class Cost extends Component {
             <input type="radio" name="costValue" value="$$$$"/> $$$$
           </div>        
         </form>
-
       </div>
     );
   }
