@@ -28,9 +28,9 @@ class Category extends Component {
             </Carousel>
           </div>
           <div className="distance-content">
-            <label>Breakfast<input type="radio" onClick={breakfast} id="breakfast" value="Breakfast" name="mealType"/></label>
-            <label>Lunch<input type="radio" onClick={lunch} id="breakfast" value="Breakfast" name="mealType"/></label>
-            <label>Dinner<input type="radio" onClick={dinner} id="breakfast" value="Breakfast" name="mealType"/></label>
+            <label>Breakfast<input type="radio" onClick={setTerm} id="breakfast" value="Breakfast" name="mealType"/></label>
+            <label>Lunch<input type="radio" onClick={setTerm} id="lunch" value="Lunch" name="mealType"/></label>
+            <label>Dinner<input type="radio" onClick={setTerm} id="dinner" value="Dinner" name="mealType"/></label>
           </div>
           <form onSubmit={this.yelp.bind(this)}>
             <input type="text" id="uiCat" placeholder="Search..."/>
@@ -39,9 +39,9 @@ class Category extends Component {
               <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
 	    </NavLink> */}
           </form>
-          
+
         </div>
-        
+
       </div>
     );
   }
@@ -72,14 +72,11 @@ class Category extends Component {
 function select(){
   console.log("test");
 }
-function breakfast(){
-  console.log("'term':'breakfast'");
-}
-function lunch(){
-  console.log("'term':'lunch'");
-}
-function dinner(){
-  console.log("'term':'dinner'");
+
+// Sets user's term parameter
+function setTerm(radio) {
+  console.log(radio.target.id);
+  localStorage.setItem('term', radio.target.id);
 }
 
 export default Category;

@@ -1,11 +1,9 @@
 var express = require('express');
 var router = express.Router();
-// Example from yelp's github
+
 const yelp = require('yelp-fusion');
 
-// Place holder for Yelp Fusion's API Key. Grab them
-// from https://www.yelp.com/developers/v3/manage_app
-const apiKey = 'sVX4lUzEERso8L9-61gN8ZojgRWKlATmMcuAeruVlXsVd4cB8OKhlrpXWZUNN8fDeF6lY-wFxhFcHwIa9HsuhogXy1GBkarqgsY8wEkPPn4O0k1JXgsEIQ8YjXlyWnYx'; // change this key
+const apiKey = 'sVX4lUzEERso8L9-61gN8ZojgRWKlATmMcuAeruVlXsVd4cB8OKhlrpXWZUNN8fDeF6lY-wFxhFcHwIa9HsuhogXy1GBkarqgsY8wEkPPn4O0k1JXgsEIQ8YjXlyWnYx';
 
 const client = yelp.client(apiKey);
 
@@ -15,9 +13,10 @@ router.get('/', function(req, res, next) {
 
   const searchRequest = {
     term: req.query.term,
-    location: 'san francisco, ca'
+    location: 'santa cruz, ca'
   };
 	client.search(searchRequest).then(response => {
+    // Randomly grab 1 restaurant from results (from 20)
 	  const firstResult = response.jsonBody.businesses[Math.floor(Math.random() * Object.keys(response.jsonBody.businesses).length)];
 	  const prettyJson = JSON.stringify(firstResult, null, 4);
 	  console.log(prettyJson);
