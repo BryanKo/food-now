@@ -5,8 +5,6 @@ import burger from './images/burger.jpg';
 import nachos from './images/nachos.jpg';
 import chinese from './images/chinese.jpg';
 import axios from 'axios';
-import DistanceOption from "./DistanceOption";
-
 class Category extends Component {
   render() {
     return (
@@ -29,6 +27,11 @@ class Category extends Component {
                 </div>
             </Carousel>
           </div>
+          <div className="distance-content">
+            <label>Breakfast<input type="radio" onClick={breakfast} id="breakfast" value="Breakfast" name="mealType"/></label>
+            <label>Lunch<input type="radio" onClick={lunch} id="breakfast" value="Breakfast" name="mealType"/></label>
+            <label>Dinner<input type="radio" onClick={dinner} id="breakfast" value="Breakfast" name="mealType"/></label>
+          </div>
           <form onSubmit={this.yelp.bind(this)}>
             <input type="text" id="uiCat" placeholder="Search..."/>
             <input type="submit" value="submit"/>
@@ -38,16 +41,10 @@ class Category extends Component {
           </form>
           
         </div>
-        <div className="distance-content">
-          <DistanceOption content="Breakfast"></DistanceOption>
-          <DistanceOption content="Lunch"></DistanceOption>
-          <DistanceOption content="Dinner"></DistanceOption>
-        </div>
+        
       </div>
     );
   }
-  
-  
 
   yelp () {
     var term = document.getElementById("uiCat").value;
@@ -74,6 +71,15 @@ class Category extends Component {
 }
 function select(){
   console.log("test");
+}
+function breakfast(){
+  console.log("'term':'breakfast'");
+}
+function lunch(){
+  console.log("'term':'lunch'");
+}
+function dinner(){
+  console.log("'term':'dinner'");
 }
 
 export default Category;
