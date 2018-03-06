@@ -11,7 +11,7 @@ class Category extends Component {
       <div>
         <h2>1. Choose a category! -- add as many as you want!</h2>
         <div className="foodChoice">
-          <div className="foodCarousel">
+          {/* <div className="foodCarousel">
             <Carousel showArrows={true} useKeyboardArrows={true} showThumbs={false} infiniteLoop={true} showIndicators={false} dynamicHeight={true} onClickItem={select}>
                 <div>
                     <img src={burger} alt="American"/>
@@ -26,15 +26,24 @@ class Category extends Component {
                     <p className="legend">Mexican</p>
                 </div>
             </Carousel>
+          </div> */}
+          <div className="foodChoices">
+            <div className="genre" id="chinese"><span className="imageTitle">Chinese</span></div>
+            <div className="genre" id="mexican"><span className="imageTitle">Mexican</span></div>
+            <div className="genre" id="italian"><span className="imageTitle">Italian</span></div>
+            <div className="genre" id="japanese"><span className="imageTitle">Japanese</span></div>
+            <div className="genre" id="american"><span className="imageTitle">American</span></div>
           </div>
+          
           <div className="distance-content">
             <label>Breakfast<input type="radio" onClick={setTerm} id="breakfast" value="Breakfast" name="mealType"/></label>
             <label>Lunch<input type="radio" onClick={setTerm} id="lunch" value="Lunch" name="mealType"/></label>
             <label>Dinner<input type="radio" onClick={setTerm} id="dinner" value="Dinner" name="mealType"/></label>
           </div>
           <form onSubmit={this.yelp.bind(this)}>
+            <span className="icon"><i className="fa fa-search"></i></span>
             <input type="text" id="uiCat" placeholder="Search..."/>
-            <input type="submit" value="submit"/>
+            {/* <input type="submit" value="submit"/> */}
 	    {/* <NavLink to="/Mealtype">
               <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
 	    </NavLink> */}

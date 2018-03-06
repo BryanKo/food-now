@@ -4,7 +4,7 @@ import axios from 'axios';
 class Button extends Component{
     render(){
         return(
-            <button onClick={this.submitAll.bind(this)}>BACK END WUZ HERE</button>
+            <button onClick={this.submitAll.bind(this)}>Food Now!</button>
         );
     }
 
