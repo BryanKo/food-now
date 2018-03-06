@@ -8,23 +8,23 @@ class Distance extends Component {
         <h2>2. How far are you willing to travel?</h2>
         <div className="distance-content">
           <div>
-            <div class="distanceLogo" id="driving"></div>
+            <div className="distanceLogo" id="driving"></div>
             <label>Driving (>5 mi.)<input type="radio" onClick={setDist} id="40000" value="40000" name="distance"/></label>
           </div>
           <div>
-            <div class="distanceLogo" id="biking"></div>
+            <div className="distanceLogo" id="biking"></div>
             <label>Biking (2 mi.)<input type="radio" onClick={setDist} id="20000" value="20000" name="distance"/></label>
           </div>
           <div>
-            <div class="distanceLogo" id="walking"></div>
+            <div className="distanceLogo" id="walking"></div>
             <label>Walking (1 mi.)<input type="radio" onClick={setDist} id="10000" value="10000" name="distance"/></label>
           </div>
           <div>
-            <div class="distanceLogo" id="block"></div>
+            <div className="distanceLogo" id="block"></div>
             <label>Within 4 blocks<input type="radio" onClick={setDist} id="5000" value="5000" name="distance"/></label>
           </div>
           <div>
-            <div class="distanceLogo" id="delivery"></div>
+            <div className="distanceLogo" id="delivery"></div>
             <label>Delivery (fat ass)<input type="radio" onClick={setDist} id="2500" value="2500" name="distance"/></label>          
           </div>
           {

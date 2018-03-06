@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import { Carousel } from 'react-responsive-carousel';
+//import { Carousel } from 'react-responsive-carousel';
 //require ('react-responsive-carousel/lib/styles/carousel.css');
-import burger from './images/burger.jpg';
-import nachos from './images/nachos.jpg';
-import chinese from './images/chinese.jpg';
+// import burger from './images/burger.jpg';
+// import nachos from './images/nachos.jpg';
+// import chinese from './images/chinese.jpg';
 import axios from 'axios';
 class Category extends Component {
   render() {
@@ -77,9 +77,6 @@ class Category extends Component {
         console.log(response);
       });
   }
-}
-function select(){
-  console.log("test");
 }
 
 // Sets user's term parameter
