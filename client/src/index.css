@@ -68,7 +68,7 @@ h2{
 .content{
   text-align: center;
 }
-button{
+.button{
   border-radius: 5px;
   width: 50%;
   font-size: 20px;
@@ -156,4 +156,13 @@ button{
 }
 .distanceLogo{
   margin-left: auto;
+}
+#outputHolder{
+  display: none;
+}
+#outputdiv{
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }

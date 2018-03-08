@@ -29,13 +29,26 @@ class Main extends Component{
                         <Route path="/cost" component={Cost}/>
                         <Route path="/rating" component={Rating}/>
                     </div> */}
-                    <Category></Category>
-                    <Distance></Distance>
-                    <Cost></Cost>
-                    <Rating></Rating>
-                    <Button></Button>
+                    <div id="contentHolder">
+                        <Category></Category>
+                        <Distance></Distance>
+                        <Cost></Cost>
+                        <Rating></Rating>
+                        <Button></Button>
+                    </div>
+                    <div id="outputHolder">
+                        <div id="outputdiv"></div>
+                        <div id="outputName">store name</div>
+                        <div id="outputAddress">store address</div>
+                        <div id="outputWebsite">store website</div>
+                        <div id="outputPhone">store phone</div>
+                        <button className="button" onClick={this.goback.bind(this)}>Go Back</button>
+                    </div>
             </div>
         );
+    }
+    goback(){
+        window.location = '/';
     }
 }
 export default Main;

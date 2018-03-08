@@ -4,14 +4,35 @@ import axios from 'axios';
 class Button extends Component{
     render(){
         return(
-            <button onClick={this.submitAll.bind(this)}>Food Now!</button>
+            <button className="button" onClick={this.submitAll.bind(this)}>Food Now!</button>
         );
     }
 
     submitAll() {
+      var genres = document.getElementById("foodChoices");
+      var termString = sessionStorage.getItem('paramString');
+      var mealType = sessionStorage.getItem('mealType');
+      console.log("term after category, before meal type: " + termString);
+      for(var i = 0; i < genres.children.length; i++){
+        // if(genres.children[i].children[1].checked){
+        //   console.log('checked');
+        // }
+        //console.log(genres.children[i].firstChild.children[0].checked);
+        if(genres.children[i].firstChild.children[0].checked){
+          console.log(genres.children[i].firstChild.firstChild);
+          if(termString === 'undefined'){
+            termString = genres.children[i].firstChild.innerText;
+          }else{
+            termString += "+"+genres.children[i].firstChild.innerText;
+          }
+        }
+      }
+      termString += "+"+mealType; 
+      console.log("term after mealtype: " + termString);
+      
         // Compile all parameters into JSON object
         var search = {
-          term: localStorage.getItem('term'),
+          term: termString,
           radius: localStorage.getItem('radius'),
           price: localStorage.getItem('price')
         };
@@ -29,6 +50,14 @@ class Button extends Component{
           }
         }).then(function(response) {
             console.log(response.data);
+            console.log(response.data.image_url);
+            document.getElementById("contentHolder").style.display = "none";
+            document.getElementById("outputHolder").style.display = "block";
+            document.getElementById("outputdiv").style.backgroundImage = "url('"+response.data.image_url+"')";
+            document.getElementById("outputName").innerHTML = response.data.name; 
+            document.getElementById("outputAddress").innerHTML = ""+response.data.location.address1+", "+response.data.location.city+", "+response.data.location.zip_code+""; 
+            //document.getElementById("outputWebsite").innerHTML = response.data.url;
+            document.getElementById("outputPhone").innerHTML = response.data.phone;  
             localStorage.setItem('item', JSON.stringify(response.data));
           }).catch(function(response) {
             console.log('error:');
