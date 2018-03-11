@@ -68,10 +68,101 @@ h2{
 .content{
   text-align: center;
 }
-button{
+.button{
   border-radius: 5px;
   width: 50%;
   font-size: 20px;
   height: 50px;
   outline:none;
+}
+.foodChoices{
+  display:flex;
+  justify-content: space-evenly;
+  height: 200px;
+}
+.genre{
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+}
+#chinese{
+  background-image: url("./images/chinese.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#mexican{
+  background-image: url("./images/mexican.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#italian{
+  background-image: url("./images/italian.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#japanese{
+  background-image: url("./images/japanese.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#american{
+  background-image: url("./images/american.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#driving{
+  background-image: url("./images/wheel.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height:35px;
+  width: 100px;
+}
+#biking{
+  background-image: url("./images/bike.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height:35px;
+  width: 100px;
+}
+#walking{
+  background-image: url("./images/walking.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height:35px;
+  width: 100px;
+}
+#block{
+  background-image: url("./images/house.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height:35px;
+  width: 100px;
+}
+#delivery{
+  background-image: url("./images/delivery.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height:35px;
+  width: 100px;
+}
+.imageTitle{
+  background-color: rgba(255,255,255,0.7);
+  color: black;
+  border-radius: 2px;
+  padding: 5px;
+}
+#uiCat{
+  margin-left: 5px;
+}
+.distanceLogo{
+  margin-left: auto;
+}
+#outputHolder{
+  display: none;
+}
+#outputdiv{
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
