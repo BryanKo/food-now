@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 
-class DistanceOption extends Component {
+class CategoryMealtype extends Component {
   constructor(props) {
     super(props);
     this.state = {selected: false};
-
     // This binding is necessary to make `this` work in the callback
     this.handleClick = this.handleClick.bind(this);
   }
@@ -13,10 +12,9 @@ class DistanceOption extends Component {
   }
   render() {
     return (
-        <label>{this.props.content}<input type="radio" name="distance" onClick={this.props.onclick}/></label>
+        <div onClick={this.props.onClick} name={this.props.name}>{this.props.content}</div>
     );
   }
 }
 
-
-export default DistanceOption;
+export default CategoryMealtype;
