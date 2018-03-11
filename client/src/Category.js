@@ -96,7 +96,7 @@ function addItem(button){
     console.log('no string');
     paramString = document.getElementById("uiCat").value;
   }else{
-    paramString += "+"+document.getElementById("uiCat").value;
+    paramString += ","+document.getElementById("uiCat").value;
   }
   sessionStorage.setItem('paramString', paramString);
 }

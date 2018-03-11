@@ -13,8 +13,10 @@ router.get('/', function(req, res, next) {
 
   const searchRequest = {
     term: req.query.term,
-    location: 'santa cruz, ca'
-  };
+		location: 'santa cruz, ca',
+		categories: req.query.categories
+	};
+	console.log("backend request: " + searchRequest);
 	client.search(searchRequest).then(response => {
     // Randomly grab 1 restaurant from results (from 20)
 	  const firstResult = response.jsonBody.businesses[Math.floor(Math.random() * Object.keys(response.jsonBody.businesses).length)];

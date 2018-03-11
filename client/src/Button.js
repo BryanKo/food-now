@@ -32,9 +32,10 @@ class Button extends Component{
       
         // Compile all parameters into JSON object
         var search = {
-          term: termString,
+          term: "restaurant",
           radius: localStorage.getItem('radius'),
-          price: localStorage.getItem('price')
+          price: localStorage.getItem('price'),
+          categories: "italian"
         };
         console.log(search);
 
@@ -46,7 +47,7 @@ class Button extends Component{
           params: {
             term: localStorage.getItem('term'),
             radius: localStorage.getItem('radius'),
-            price: localStorage.getItem('price')
+            price: localStorage.getItem('price'),
           }
         }).then(function(response) {
             console.log(response.data);
@@ -54,9 +55,9 @@ class Button extends Component{
             document.getElementById("contentHolder").style.display = "none";
             document.getElementById("outputHolder").style.display = "block";
             document.getElementById("outputdiv").style.backgroundImage = "url('"+response.data.image_url+"')";
-            document.getElementById("outputName").innerHTML = response.data.name; 
+            document.getElementById("outputName").innerText = response.data.name; 
             document.getElementById("outputAddress").innerHTML = ""+response.data.location.address1+", "+response.data.location.city+", "+response.data.location.zip_code+""; 
-            //document.getElementById("outputWebsite").innerHTML = response.data.url;
+            document.getElementById("outputWebsite").href = response.data.url;
             document.getElementById("outputPhone").innerHTML = response.data.phone;  
             localStorage.setItem('item', JSON.stringify(response.data));
           }).catch(function(response) {

@@ -40,7 +40,8 @@ class Main extends Component{
                         <div id="outputdiv"></div>
                         <div id="outputName">store name</div>
                         <div id="outputAddress">store address</div>
-                        <div id="outputWebsite">store website</div>
+                        {/* <a id="outputWebsite"></a> */}
+                        <span><a id="outputWebsite">Click Here</a> for website</span>
                         <div id="outputPhone">store phone</div>
                         <button className="button" onClick={this.goback.bind(this)}>Go Back</button>
                     </div>
