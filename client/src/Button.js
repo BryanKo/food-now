@@ -4,7 +4,7 @@ import axios from 'axios';
 class Button extends Component{
     render(){
         return(
-            <button className="button" onClick={this.submitAll.bind(this)}>Food Now!</button>
+            <button className="button" onClick={this.submitAll.bind(this)}>GET FOOD NOW!</button>
         );
     }
 
@@ -56,7 +56,7 @@ class Button extends Component{
             document.getElementById("outputdiv").style.backgroundImage = "url('"+response.data.image_url+"')";
             document.getElementById("outputName").innerHTML = response.data.name;
             document.getElementById("outputAddress").innerHTML = ""+response.data.location.address1+", "+response.data.location.city+", "+response.data.location.zip_code+"";
-            //document.getElementById("outputWebsite").innerHTML = response.data.url;
+            document.getElementById("outputWebsite").href = response.data.url;
             document.getElementById("outputPhone").innerHTML = response.data.phone;
             localStorage.setItem('item', JSON.stringify(response.data));
             sessionStorage.clear();

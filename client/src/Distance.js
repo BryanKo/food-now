@@ -6,26 +6,27 @@ class Distance extends Component {
     return (
       <div>
         <h2>2. How far are you willing to travel?</h2>
+        <input id="city-location" className="location-holder" placeholder="Put your city here"/>
         <div className="distance-content">
           <div>
-            <div className="distanceLogo" id="driving"></div>
+          <i className="fas fa-car fa-2x"></i>&nbsp;
             <label>Driving (>5 mi.)<input type="radio" onClick={setDist} id="8000" value="8000" name="distance"/></label>
           </div>
           <div>
-            <div className="distanceLogo" id="biking"></div>
-            <label>Biking (2 mi.)<input type="radio" onClick={setDist} id="8000" value="8000" name="distance"/></label>
+          <i className="fas fa-bicycle fa-2x"></i>&nbsp;
+          <label>Biking (2 mi.)<input type="radio" onClick={setDist} id="8000" value="8000" name="distance"/></label>
           </div>
           <div>
-            <div className="distanceLogo" id="walking"></div>
-            <label>Walking (1 mi.)<input type="radio" onClick={setDist} id="1600" value="1600" name="distance"/></label>
+          <i className="fas fa-male fa-2x"></i>&nbsp;
+          <label>Walking (1 mi.)<input type="radio" onClick={setDist} id="1600" value="1600" name="distance"/></label>
           </div>
           <div>
-            <div className="distanceLogo" id="block"></div>
-            <label>Within 4 blocks<input type="radio" onClick={setDist} id="800" value="800" name="distance"/></label>
+          <i className="fas fa-home fa-2x"></i>&nbsp;
+          <label>Within 4 blocks<input type="radio" onClick={setDist} id="800" value="800" name="distance"/></label>
           </div>
           <div>
-            <div className="distanceLogo" id="delivery"></div>
-            <label>Delivery (fat ass)<input type="radio" onClick={setDist} id="40000" value="40000" name="distance"/></label>
+          <i className="fas fa-shipping-fast fa-2x"></i>&nbsp;
+          <label>Delivery<input type="radio" onClick={setDist} id="40000" value="40000" name="distance"/></label>
           </div>
           {
             /* JOSH/JASPER'S OLD OPTIONS

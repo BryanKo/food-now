@@ -27,6 +27,21 @@ class Category extends Component {
                 </div>
             </Carousel>
           </div> */}
+          
+          <form className="category-search">
+            <span className="icon"><i className="fa fa-search"></i></span>
+            <input type="text" id="uiCat" placeholder="Add new item"/>
+            <button className="button-small" type="button" id="addbutton" onClick={addItem}>ADD</button>
+            {/* <input type="submit" value="submit"/> */}
+	    {/* <NavLink to="/Mealtype">
+              <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
+	    </NavLink> */}
+          </form>
+          <div className="category-content">
+            <label className="category-item">Breakfast<input type="radio" onClick={setTerm} id="breakfast" value="Breakfast" name="mealType"/></label>
+            <label className="category-item">Lunch<input type="radio" onClick={setTerm} id="lunch" value="Lunch" name="mealType"/></label>
+            <label className="category-item">Dinner<input type="radio" onClick={setTerm} id="dinner" value="Dinner" name="mealType"/></label>
+          </div>
           <div className="foodChoices" id="foodChoices">
             <div className="genre" id="chinese"><span className="imageTitle">Chinese<input type="checkbox" value="chinese" /></span></div>
             <div className="genre" id="mexican"><span className="imageTitle">Mexican<input type="checkbox" value="mexican" /></span></div>
@@ -35,20 +50,7 @@ class Category extends Component {
             <div className="genre" id="american"><span className="imageTitle">American<input type="checkbox" value="american" /></span></div>
           </div>
           
-          <div className="distance-content">
-            <label>Breakfast<input type="radio" onClick={setTerm} id="breakfast" value="Breakfast" name="mealType"/></label>
-            <label>Lunch<input type="radio" onClick={setTerm} id="lunch" value="Lunch" name="mealType"/></label>
-            <label>Dinner<input type="radio" onClick={setTerm} id="dinner" value="Dinner" name="mealType"/></label>
-          </div>
-          <form>
-            <span className="icon"><i className="fa fa-search"></i></span>
-            <input type="text" id="uiCat" placeholder="Add new item"/>
-            <button type="button" id="addbutton" onClick={addItem}>Add</button>
-            {/* <input type="submit" value="submit"/> */}
-	    {/* <NavLink to="/Mealtype">
-              <input type="submit" id="next" onClick={this.myfunction.bind(this)} value="Submit"/>
-	    </NavLink> */}
-          </form>
+          
 
         </div>
 

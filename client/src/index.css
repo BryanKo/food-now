@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: #f5f5f5;
 }
 
 .header{
@@ -34,17 +35,20 @@ h2{
 .account{
   float:right;
   padding: 15px;
+  color: #f5f5f5;
 }
 .title{
   font-size: 40px;
   font-weight: bold;
   float: left;
+  color: #f5f5f5;
+  padding-top: 2%;
 }
 .header-title{
   display: block;
   overflow: hidden;
   padding: 20px;
-  background-color: salmon;
+  background-color: #d32323;
 }
 .searchBar{
   width: 100%;
@@ -59,6 +63,19 @@ h2{
   justify-content: space-evenly;
   user-select: none;
 }
+.category-search{
+  margin-top: -20px;
+}
+.category-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  user-select: none;
+  margin-top: 12px;
+}
+.category-item{
+  padding-left: 20px;
+}
 .selected{
   color: red;
 }
@@ -70,10 +87,25 @@ h2{
 }
 .button{
   border-radius: 5px;
-  width: 50%;
+  width: 25%;
   font-size: 20px;
   height: 50px;
+  margin-top: 20px;
   outline:none;
+  background-color: #0073bb;
+  color: #f5f5f5;
+  border:none;
+}
+.button-small{
+  border-radius: 2px;
+  width: 50px;
+  font-size: 13px;
+  height: 21px;
+  margin-top: 20px;
+  outline:none;
+  background-color: #0073bb;
+  color: #f5f5f5;
+  border:none;
 }
 .foodChoices{
   display:flex;
@@ -84,6 +116,8 @@ h2{
   width: 20%;
   padding: 10px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
 #chinese{
   background-image: url("./images/chinese.jpg");
@@ -146,13 +180,14 @@ h2{
   width: 100px;
 }
 .imageTitle{
-  background-color: rgba(255,255,255,0.7);
+  background-color: #f5f5f5;
   color: black;
   border-radius: 2px;
   padding: 5px;
 }
 #uiCat{
   margin-left: 5px;
+  width: 30%;
 }
 .distanceLogo{
   margin-left: auto;
@@ -165,4 +200,148 @@ h2{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+}
+
+
+
+
+/* body {
+  margin: 0;
+  padding: 0;
+  background: #ffb6c1;
+} */
+
+.cost {
+  /* position: absolute;
+  top: 50%;
+  left: 40%; */
+  transform: translate(-50%, -50%);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  display: flex;
+}
+.cost input {
+    display: none;
+}
+.cost label {
+  display: block;
+  cursor: pointer;
+  width: 50px;
+}
+.cost label:before {
+  content: '\f155';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 50px; 
+  color: #101010;
+}
+.cost label:after {
+  content: '\f155';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 50px; 
+  top: 0;
+  color: #c1ffb6;
+  opacity: 0;
+  transition: .3s;
+}
+.cost label:hover:after,
+.cost label:hover ~ label:after,
+.cost input:checked ~ label:after {
+  opacity: 1;
+}
+.rate {
+  /* position: absolute;
+  top: 50%;
+  left: 40%; */
+  transform: translate(-50%, -50%);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  display: flex;
+}
+.rate input {
+    display: none;
+}
+.rate label {
+  display: block;
+  cursor: pointer;
+  width: 50px;
+}
+.rate label:before {
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 50px; 
+  color: #101010;
+}
+.rate label:after {
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 50px; 
+  top: 0;
+  color: #c1ffb6;
+  opacity: 0;
+  transition: .3s;
+}
+.rate label:hover:after,
+.rate label:hover ~ label:after,
+.rate input:checked ~ label:after {
+  opacity: 1;
+}
+#outputWebsite{
+  color: #0073bb;
+}
+.userLogin{
+  content: '\f007';
+}
+.red{
+  color: #d32323;
+}
+.monay{
+  color: #3a6e1b;
+}
+#outputHolder{
+  margin-top: 20px;
+}
+#outputdiv{
+  margin-bottom:20px;
+}
+#outputName{
+  margin-top: 5px;
+}
+#outputAddress{
+  margin-top: 5px;
+}
+#outputPhone{
+  margin-top: 5px;
+}
+.outputWebsite{
+  margin-top: 5px;
+}
+.button-sign{
+  margin: 5px;
+  width: 50%;
+  border-radius: 2px;
+  font-size: 13px;
+  height: 21px;
+  outline:none;
+  background-color: #0073bb;
+  color: #f5f5f5;
+  border:none;
+}
+.location-holder{
+  margin-bottom: 20px;
 }
