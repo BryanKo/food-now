@@ -23,19 +23,18 @@ class Button extends Component{
           if(termString === 'undefined'){
             termString = genres.children[i].firstChild.innerText;
           }else{
-            termString += "+"+genres.children[i].firstChild.innerText;
+            termString += "_"+genres.children[i].firstChild.innerText;
           }
         }
       }
-      termString += "+"+mealType; 
+      termString += "_"+mealType;
       console.log("term after mealtype: " + termString);
-      
+
         // Compile all parameters into JSON object
         var search = {
-          term: "restaurant",
-          radius: localStorage.getItem('radius'),
-          price: localStorage.getItem('price'),
-          categories: "italian"
+          term: termString,
+          radius: sessionStorage.getItem('radius'),
+          price: sessionStorage.getItem('price')
         };
         console.log(search);
 
@@ -45,9 +44,9 @@ class Button extends Component{
             'Content-Type': 'applications/json',
           },
           params: {
-            term: localStorage.getItem('term'),
-            radius: localStorage.getItem('radius'),
-            price: localStorage.getItem('price'),
+            term: termString,
+            radius: sessionStorage.getItem('radius'),
+            price: sessionStorage.getItem('price')
           }
         }).then(function(response) {
             console.log(response.data);
@@ -55,11 +54,12 @@ class Button extends Component{
             document.getElementById("contentHolder").style.display = "none";
             document.getElementById("outputHolder").style.display = "block";
             document.getElementById("outputdiv").style.backgroundImage = "url('"+response.data.image_url+"')";
-            document.getElementById("outputName").innerText = response.data.name; 
-            document.getElementById("outputAddress").innerHTML = ""+response.data.location.address1+", "+response.data.location.city+", "+response.data.location.zip_code+""; 
-            document.getElementById("outputWebsite").href = response.data.url;
-            document.getElementById("outputPhone").innerHTML = response.data.phone;  
+            document.getElementById("outputName").innerHTML = response.data.name;
+            document.getElementById("outputAddress").innerHTML = ""+response.data.location.address1+", "+response.data.location.city+", "+response.data.location.zip_code+"";
+            //document.getElementById("outputWebsite").innerHTML = response.data.url;
+            document.getElementById("outputPhone").innerHTML = response.data.phone;
             localStorage.setItem('item', JSON.stringify(response.data));
+            sessionStorage.clear();
           }).catch(function(response) {
             console.log('error:');
             console.log(response);

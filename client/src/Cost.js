@@ -26,7 +26,7 @@ class Cost extends Component {
 // Sets user's price parameter
 function setPrice(radio) {
   console.log(radio.target.id);
-  localStorage.setItem('price', radio.target.id);
+  sessionStorage.setItem('price', radio.target.id);
 }
 
 export default Cost;
